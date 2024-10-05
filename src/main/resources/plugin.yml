@@ -1,0 +1,23 @@
+name: MultiWorld-by-VlaDick
+version: 1.0.0
+api-version: 1.21
+main: org.plugin.Main
+commands:
+  lobby:
+    description: Телепортирует игрока в мир lobby
+    usage: /lobby
+  world-create:
+    description: Создает личный мир для игрока с его именем
+    usage: /world-create
+  world-reload:
+    description: Перезагружает личный мир игрока
+    usage: /world-reload
+  world-teleport:
+    description: Телепортирует игрока в указанный мир
+    usage: /world-teleport <worldName>
+  world-list:
+    description: Выводит список всех созданных миров
+    usage: /world-list
+  world-menu:
+    description: Выводит меню
+    usage: /world-menu

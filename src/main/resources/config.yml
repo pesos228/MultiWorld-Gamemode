@@ -30,3 +30,4 @@ events:
 
 voting:
   min-players: 3
+  voting-interval-ticks: 12000  # Интервал голосований в тиках (20 тиков = 1 секунда)

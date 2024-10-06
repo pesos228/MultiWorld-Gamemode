@@ -10,7 +10,6 @@ import org.plugin.handler.*;
 
 public class Main extends JavaPlugin implements Listener {
     private static final long VOTING_DURATION_TICKS = 1200L; // 1 минута
-    private static final long VOTING_INTERVAL_TICKS = 12000L; // 10 минут
 
     private WorldService worldService;
     private WorldCopyService worldCopyService;
@@ -72,9 +71,10 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private void scheduleVotingTasks() {
+        long votingIntervalTicks = getConfig().getLong("voting.voting-interval-ticks", 12000L);
         getServer().getScheduler().runTaskTimer(this, () -> {
             eventManager.startVoting();
             getServer().getScheduler().runTaskLater(this, eventManager::endVoting, VOTING_DURATION_TICKS);
-        }, 0L, VOTING_INTERVAL_TICKS);
+        }, 0L, votingIntervalTicks);
     }
 }

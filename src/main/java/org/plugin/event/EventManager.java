@@ -172,12 +172,22 @@ public class EventManager {
 
         votingActive = false;
         if (votes.isEmpty()) {
-            Bukkit.broadcastMessage(ChatColor.YELLOW + "🏁 Голосование завершено! Никто не проголосовал.");
+            if (currentEvents.isEmpty()) {
+                Bukkit.broadcastMessage(ChatColor.RED + "Ошибка: Нет доступных событий для выбора.");
+                return;
+            }
+
+            Random random = new Random();
+            GameEvent selectedEvent = currentEvents.get(random.nextInt(currentEvents.size()));
+
+            Bukkit.broadcastMessage(ChatColor.YELLOW + "🏁 Голосование завершено! Никто не проголосовал. Случайным образом выбрано событие: " + ChatColor.GOLD + selectedEvent.getName());
+            executeEvent(selectedEvent);
             return;
         }
 
         announceVotingResults();
     }
+
 
     private void announceVotingResults() {
         Map<Integer, Long> voteCounts = new HashMap<>();

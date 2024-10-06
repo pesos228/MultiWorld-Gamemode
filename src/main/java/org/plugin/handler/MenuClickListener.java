@@ -1,4 +1,4 @@
-package org.plugin.event;
+package org.plugin.handler;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

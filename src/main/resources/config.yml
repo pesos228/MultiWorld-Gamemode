@@ -1,1 +1,32 @@
 lobby-world: lobby
+events:
+  enabled: true
+  AmiroEvent:
+    enabled: true
+  CoronavirusEvent:
+    enabled: true
+  CreeperSummonEvent:
+    enabled: true
+  DrinkEvent:
+    enabled: true
+  HayuHaychikiEvent:
+    enabled: true
+  LavaRainEvent:
+    enabled: true
+  MeteorShowerEvent:
+    enabled: true
+  NeverNeverRabbitEvent:
+    enabled: true
+  RandomMobSpawnEvent:
+    enabled: true
+  RandomRainEvent:
+    enabled: true
+  RandomTimeChangeEvent:
+    enabled: true
+  ZombieApocalypseEvent:
+    enabled: true
+  ChernyachkaEvent:
+    enabled: true
+
+voting:
+  min-players: 3

@@ -1,7 +1,6 @@
-package org.plugin.event;
+package org.plugin.handler;
 
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
